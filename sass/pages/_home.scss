@@ -23,6 +23,10 @@
 
 .tours{
     background-color: $color-grey-light-1;
-    padding: 25rem 0 25rem 0;
+    padding: 25rem 0 10rem 0;
     margin-top: -8rem;
+}
+.btn-tours{
+    background-color: $color-primary-dark;
+    color:$color-white;
 }
