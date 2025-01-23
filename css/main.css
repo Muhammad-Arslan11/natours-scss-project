@@ -422,15 +422,27 @@ body {
 .story__img {
   height: 100%;
   width: 100%;
+  transition: all 0.5s;
+  transform: scale(1.2);
 }
 .story__caption {
   position: absolute;
-  top: 33%;
-  left: 15%;
+  top: 114%;
+  left: 52%;
+  transform: translate(-50%, -50%);
   text-align: center;
   text-transform: uppercase;
   color: #fff;
   font-size: 1.7rem;
+  transition: all 0.5s;
+}
+.story:hover .story__caption {
+  top: 51%;
+  left: 50%;
+}
+.story:hover .story__img {
+  transform: scale(1);
+  filter: blur(3px) brightness(80%);
 }
 
 .grid {
