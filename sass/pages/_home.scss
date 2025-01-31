@@ -31,8 +31,8 @@
     color:$color-white;
 }
 .stories{
-    // position: absolute;
+    position: relative;
+    height: 102rem;
+    width: 100vw;
     padding: 3rem 0;
-    // z-index:10;
-    // background-color: $color-grey-light-1;
 }
