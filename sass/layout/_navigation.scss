@@ -14,6 +14,7 @@ display: none;
         z-index: 200;
         border-radius: 50%;
         box-shadow: 0 1rem 3rem rgba($color-dark, .1);
+        cursor: pointer;
     }
 
     &__background{
@@ -87,5 +88,54 @@ display: none;
       
         width:100%;
         opacity:1;
+    }
+
+    // icon
+    &__icon{
+        position: relative;
+        top: 3rem;
+        left: 1.4rem;
+
+        &, &::before, &::after{
+            height: 2px;
+            width: 3rem;
+            display: inline-block;
+            background-color: $color-grey-dark-3;
+        }
+        
+        &::before, &::after{
+            content: "";
+            position:absolute;
+            left:0;
+            transition:  all .5s;
+        }
+
+        &::after{top: -.8rem;}
+        &::before{top: .8rem;}
+
+    
+    }
+
+    &__button:hover &__icon::before{
+        top: -1rem;
+    }
+
+    &__button:hover &__icon::after{
+        top: 1rem;
+    }
+
+     // explanation of the selector:
+     // when navigation__checkbox is checked, select its adjacent sibling and the child
+     // of that sibling
+    &__checkbox:checked + &__button &__icon{
+      background-color: transparent;
+    }
+    &__checkbox:checked + &__button &__icon::before{
+        top: 0;
+        transform: rotate(-45deg);
+    }
+    &__checkbox:checked + &__button &__icon::after{
+        top: 0;
+        transform: rotate(45deg);
     }
 }
