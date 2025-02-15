@@ -13,6 +13,12 @@
         animation-name: moveInLeft;
         animation-duration: 2s;
         animation-timing-function: ease-in-out;
+
+        // media queries
+        @include respond(tab-port){
+            font-size: 4rem;
+            letter-spacing:  1rem;
+        }
     }
     
     &--sub{
@@ -25,6 +31,12 @@
         animation-name: moveInRight;
         animation-duration: 2s;
         animation-timing-function: ease-in-out;
+
+           // media queries
+           @include respond(phone){
+            font-size: 2rem;
+            letter-spacing:  1rem;
+        }
     }
 }
 
@@ -43,6 +55,17 @@
         cursor: pointer;
         transform: skewX(10deg) skewY(2deg) scale(1.1);
         text-shadow: .5rem 1.5rem 2rem rgba($color-dark, .2);
+    }
+
+    // media queries
+    @include respond(tab-port){
+        font-size: 2.8rem;
+
+    }
+
+    @include respond(phone){
+        font-size: 2.8rem;
+        
     }
 
 }

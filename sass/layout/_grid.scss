@@ -11,13 +11,26 @@
 
    &:not(:last-child){
         margin-bottom: $gutter-vertical;
+
+        // media queries
+        @include respond(tab-port){
+          margin-bottom: $gutter-vertical-small;
+        }
     }
 
     [class^="col-"]{
        
         float:left;
+
         &:not(:last-child){
           margin-right: $gutter-horizontal;
+
+          // media queries
+          @include respond(tab-port){
+           margin-right: 0;
+           width: 100% !important;
+           margin-bottom: $gutter-horizontal-small;
+          }
         }
 }
 
