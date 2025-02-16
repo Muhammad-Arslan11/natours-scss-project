@@ -8,10 +8,21 @@
     background-size: cover;
     clip-path: polygon(0% 0%, 100% 0%, 100% 75vh, 0% 100%);
 
+    // media queries
+    @include respond(phone){
+        clip-path: polygon(0% 0%, 100% 0%, 100% 85vh, 0% 100%);
+    }
+
     &__logo{
         position: relative;
         top: 2rem;
         left:2rem;
+
+         // media queries
+    @include respond(tab-port){
+        top: 3.3rem;
+        left:2rem;
+    }
     }
 
     &__logo img{
