@@ -3,6 +3,20 @@
     padding: 25rem 0;
     margin-top: -20vh;
     z-index:3;
+
+    &__btn{
+        //media queries
+        &--center{
+            @include respond(phone){
+                text-align: center;
+            }
+        }
+    }
+
+    // media queries
+    @include respond(phone){
+        padding:  25rem 2rem;
+    }
 }
 .feature{
     z-index:2;
