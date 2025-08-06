@@ -3,7 +3,7 @@
     padding: 25rem 0;
     margin-top: -20vh;
     z-index:3;
-
+    min-height: max-content;
     &__btn{
         //media queries
         &--center{
@@ -18,20 +18,28 @@
         padding:  25rem 2rem;
     }
 }
+
 .feature{
     z-index:2;
     margin-top:-8rem;
     padding: 20rem 0;
+
     background-image: linear-gradient(to right bottom,
     rgba($color-primary-light, 0.804),
     rgba($color-primary-dark, 0.804)),
    url('/img/nat-4.jpg');
+
    background-size: cover;
    display: flex;
    transform: skewY(-7deg);
 
    &>*{
     transform: skewY(7deg);
+   }
+
+   // media queries
+   @include respond(tab-port){
+    // margin-top: 10rem;
    }
 }
 
@@ -49,6 +57,10 @@
     height: 102rem;
     width: 100vw;
     padding: 3rem 0;
+    // media queries
+    @include respond(tab-port){
+        height: 132rem;
+    }
 }
 
 .booking{
@@ -57,18 +69,50 @@
 }
 
 .book{
-    background-image:linear-gradient(105deg, rgba($color-white, .9) 0%, 
+    background-image:linear-gradient(105deg, rgba($color-white, .9) 0%,  
     rgba($color-white, .9) 50%, 
     transparent 50%), 
     url('../img/nat-10.jpg');
     
-    height: 50rem;
+    // height: 50rem;
+
+    
+    
     background-size: 100%;
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba($color-dark, .2);
+    
+    // media queries
+    @include respond(tab-land){
+          background-image:linear-gradient(
+            105deg, 
+            rgba($color-white, .9) 0%, 
+            rgba($color-white, .9) 65%, 
+            transparent 65%), 
+            url('../img/nat-10.jpg');
+          background-size: cover;
+    }
+
+     @include respond(tab-port){
+          background-image:linear-gradient(to right, 
+          rgba($color-white, .9) 0%, 
+          rgba($color-white, .9) 100%),
+          url('../img/nat-10.jpg');
+    }
+
 
     &__form{
         padding:6rem;
         width: 50%;
+
+        // media queries
+        @include respond(tab-land){
+                  width: 65%;
+        }
+
+        @include respond(tab-port){
+                  width: 100%;
+                    padding:4rem;
+        }
     }
 }

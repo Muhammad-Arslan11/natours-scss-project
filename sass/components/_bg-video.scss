@@ -27,6 +27,11 @@
     overflow: hidden; /* Prevent content spill */
     z-index: -1; /* Places the video behind everything */
     position: absolute;
+
+     // media queries
+     @include respond(tab-port){
+      height: 132rem;
+    }
 }
 
 .bg-video__content {
@@ -37,4 +42,9 @@
     width: 100vw;
     object-fit: cover; /* Ensures the video covers the section */
     opacity: 0.2; /* Keep the opacity if you need a faded effect */
+
+    // media queries
+    @include respond(tab-port){
+      height: 132rem;
+    }
 }

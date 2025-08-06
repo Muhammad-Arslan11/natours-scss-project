@@ -21,7 +21,11 @@
 
     // media queries
     @include respond(tab-port){
-      max-width: 28rem;
+      max-width: 39rem;
+    }
+
+     @include respond(phone){
+      max-width: 31rem;
     }
 
     [class^="col-"]{
